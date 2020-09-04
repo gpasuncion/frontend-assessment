@@ -1,0 +1,38 @@
+/**
+ * @section Base Styles (Reboot/Normalize)
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: $font-family-base;
+	margin: 0;
+	-webkit-text-size-adjust: 100%; // 2
+    -ms-text-size-adjust: 100%; // 2
+}
+
+h1,
+p {
+	margin: 0;
+}
+
+a:hover,
+a:focus {
+	outline: 0;
+}
+
+input,
+textarea,
+select,
+button {
+	font: inherit;
+}
+
+@keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
