@@ -1,40 +1,56 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries. Bonus points if SASS/LESS is used and jQuery is not used.
+# Mindarc Frontend Assessment Boilerplate 
 
-Exercise 1
----
-Build a responsive page based on the designs.
+Assessment accomplished by *George Asuncion Jr*
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+## Project Contents
+- original source files (HTML, JS, CSS)
+- distribution files
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
+### Dependencies
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+If source files need to be tested make sure these are installed first.
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+- [Node.js](http://nodejs.org)
+- [Gulp Command Line Utility](http://gulpjs.com) `npm install --global gulp-cli`
 
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+### Testing
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+__Testing with source files:__
+1. In bash/terminal/command line, `cd` into your project directory.
+2. Run `npm install` to install required files and dependencies.
+3. When it's done installing, run one of the task runners to get going:
+	- `gulp` manually compiles files.
+	- `gulp watch` automatically compiles files and applies changes using [BrowserSync](https://browsersync.io/) when you make changes to your source files.
+	
+__Testing with distribution files:__
+1. Go to project directory.
+2. Open the dist folder and locate the assessment files (exercise1.html or exercise2.html) you wish to check
+
+
+
+
+
+### Assessment Notes
+
+##### Exercise 1
+
+- Created the responsive design website with HTML and CSS (through SASS)
+- Used [Gulp Boilerplate](https://github.com/cferdinandi/gulp-boilerplate)
+
+##### Exercise 2
+
+- Display data from `data.json` as tabs on desktop and an accordion on mobile
+- Data is gathered using the `fetch()` API directly from the  [Project Github](https://raw.githubusercontent.com/mindarc/frontend-assessment/master/data.json) repository
+- Does not use any Javascript libraries
+
+###### Bonus
+Explain why the result of ('b' + 'a' + + 'a' + 'a').toLowerCase() is banana.
+
+_The following expression 'b' + 'a' + + 'a' + 'a' will be evaluated a (regular concatenation) s:_
+
+- `('b') + ('a')` = ba
+- `+ (+'a')` = NaN (Not a Number, attempts to convert the string to a number but fails because a is not a number that's why it returns NaN)
+- `+ ('a')` = a
+- The current result will be: baNaNa
+- From this expression `toLowerCase()` method is applied that will result to **banana**
